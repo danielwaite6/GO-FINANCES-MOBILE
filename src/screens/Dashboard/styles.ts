@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
-
+import { Feather } from '@expo/vector-icons';
 
 export const Container = styled.View`
     flex: 1;
@@ -9,18 +9,20 @@ export const Container = styled.View`
 
 export const Header = styled.View`
     width: 100%;
-    height: ${RFPercentage(42)}px;
+    height: ${RFPercentage(38)}px;
     background-color: ${({ theme }) => theme.colors.primary};
 
     flex-direction: row;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
 `;
 
 export const UserWrapper = styled.View`
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    background: red;
     padding-left: 13px;
     padding-right: 13px;
 `;
@@ -52,4 +54,35 @@ export const UserName = styled.Text`
     color: ${({ theme }) => theme.colors.shape};
     font-family: ${({ theme }) => theme.fonts.bold};
     font-size: ${RFValue(18)}px;
+`;
+
+export const Icon = styled(Feather)`
+
+    color: ${({ theme }) => theme.colors.secondary};
+    font-size: ${RFValue(24)}px;
+`;
+
+export const HighLighterCards = styled.ScrollView.attrs({
+    horizontal: true,
+    showsHorizontalScrollIndicator: false,
+    contentContainerStyle: { paddingHorizontal: 24 },
+})`
+    width: 100%;
+    position: absolute;
+    margin-top: ${RFPercentage(30)}px;
+`;
+
+
+
+export const Transactions = styled.View`
+    flex: 1;
+    padding: 0 24px;
+    margin-top: ${RFPercentage(26)}px;
+`;
+
+export const Title = styled.Text`
+    font-size: ${RFValue(18)}px;
+    font-family: ${({ theme }) => theme.fonts.regular};
+
+    margin-bottom: 16px;
 `;
