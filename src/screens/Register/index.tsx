@@ -18,6 +18,13 @@ import {
     TransactionTypes
 } from './styles';
 
+
+interface FormData {
+    name: string;
+    amount: string;
+}
+
+
 export function Register() {
 
     const [category, setCategory] = useState({
@@ -43,12 +50,14 @@ export function Register() {
         setCategoryModalOpen(false);
     }
 
-    function handleRegister(form) {
-        /*const data = {
+    function handleRegister(form: FormData) {
+        const data = {
+            name: form.name,
+            amount: form.amount,
             transactionType,
             category: category.key,
-        }*/
-        console.log('Form:', form);
+        }
+        console.log('Form:', data);
 
     }
 
