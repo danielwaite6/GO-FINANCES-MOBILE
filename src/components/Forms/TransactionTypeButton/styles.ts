@@ -4,6 +4,7 @@ import { RFValue } from 'react-native-responsive-fontsize';
 import { Feather } from '@expo/vector-icons';
 
 
+
 interface IconProps {
     type: 'up' | 'down';
 }
@@ -40,6 +41,9 @@ export const Container = styled(TouchableOpacity) <ContainerProps>`
         background-color: ${({ theme }) => theme.colors.attention_light};
    `}
 `;
+
+
+
 
 export const Icon = styled(Feather) <IconProps>`
     font-size: ${RFValue(24)}px;
